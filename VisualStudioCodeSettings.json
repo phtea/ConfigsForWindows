@@ -1,0 +1,97 @@
+{
+    "editor.mouseWheelZoom": true,
+    "json.schemas": [],
+    "explorer.confirmDelete": false,
+    "editor.fontSize": 20,
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.unicodeHighlight.allowedLocales": {
+        "ru": true
+    },
+    "files.associations": {
+        "*.ahk": "ahk",
+    },
+    "editor.fontLigatures": false,
+    "explorer.confirmDragAndDrop": false,
+    "editor.fontFamily": "\"JetBrains Mono\", Consolas, 'Courier New', monospace",
+    "workbench.colorTheme": "Default Dark+",
+    "git.openRepositoryInParentFolders": "never",
+    "explorer.confirmPasteNative": false,
+    "[ini]": {},
+    "logFileHighlighter.customPatterns": [],
+    "git.confirmSync": false,
+    "editor.rulers": [
+        100
+    ],
+    "python.analysis.typeCheckingMode": "standard",
+    "workbench.settings.applyToAllProfiles": [],
+    "python.analysis.extraPaths": [
+        "./src"
+    ],
+    "files.exclude": {
+        "**/.log": true
+    },
+    "editor.minimap.maxColumn": 60,
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "editor.minimap.renderCharacters": false,
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": false,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "debug.toolBarLocation": "commandCenter",
+    "launch": {
+        "configurations": [
+            {
+                "name": "Launch Package",
+                "type": "go",
+                "request": "launch",
+                "mode": "auto",
+                "program": "${fileDirname}",
+                "console": "integratedTerminal"
+            }
+        ],
+        "compounds": []
+    },
+    "debug.internalConsoleOptions": "neverOpen",
+    "editor.lineNumbers": "relative",
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "K"
+            ],
+            "after": [
+                "g",
+                "h"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "d"
+            ],
+            "commands": [
+                {
+                    "command": "workbench.action.terminal.sendSequence",
+                    "args": {
+                        "text": "go run main.go\n"
+                    }
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "d",
+                "f",
+            ],
+            "commands": [
+                "workbench.action.debug.start"
+            ]
+        },
+    ],
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#1A1A1A",
+        "statusBar.noFolderBackground": "#212121",
+        "statusBar.debuggingBackground": "#263238"
+    }
+}
