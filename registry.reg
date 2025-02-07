@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\*\shell\Create Symlink]
+@="Create Symlink"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\*\shell\Create Symlink\command]
+@="cmd.exe /c mklink \"%V_symlink\" \"%1\""
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\shell\Create Symlink]
+@="Create Symlink"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\shell\Create Symlink\command]
+@="cmd.exe /c mklink /D \"%V_symlink\" \"%1\""
