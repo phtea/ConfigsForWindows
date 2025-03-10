@@ -16,8 +16,21 @@ function cut {
         return
     }
 
+    # Validate and set output filename
     $Output = [System.IO.Path]::ChangeExtension($Filename, "") + "_cut" + [System.IO.Path]::GetExtension($Filename)
-    $command = "ffmpeg -i `"$Filename`" -ss $From -to $To -map 0 -c copy `"$Output`""
+
+    # Construct ffmpeg command based on parameters
+    $command = "ffmpeg -i `"$Filename`" "
+
+    if ($From -ne "*") {
+        $command += "-ss $From "
+    }
+    if ($To -ne "*") {
+        $command += "-to $To "
+    }
+
+    $command += "-map 0 -c copy `"$Output`""
+    
     Write-Host "Running: $command"
     Invoke-Expression $command
 }

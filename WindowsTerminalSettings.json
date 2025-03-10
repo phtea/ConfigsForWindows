@@ -4,9 +4,6 @@
     "actions": 
     [
         {
-            "command": "unbound"
-        },
-        {
             "command": 
             {
                 "action": "copy",
@@ -14,6 +11,9 @@
             },
             "id": "User.copy.644BA8F2",
             "keys": "ctrl+c"
+        },
+        {
+            "command": "unbound"
         },
         {
             "command": "paste",
@@ -44,6 +44,7 @@
         }
     ],
     "alwaysShowNotificationIcon": false,
+    "alwaysShowTabs": true,
     "autoHideWindow": false,
     "centerOnLaunch": true,
     "copyFormatting": "none",
@@ -67,18 +68,22 @@
         {
             "adjustIndistinguishableColors": "never",
             "antialiasingMode": "cleartype",
-            "backgroundImage": "C:\\Users\\cerej\\OneDrive\\Pictures\\Saved Pictures\\lain.jpg",
             "backgroundImageOpacity": 0.2,
             "bellStyle": "window",
             "colorScheme": "Campbell",
-            "cursorShape": "filledBox",
+            "cursorShape": "emptyBox",
             "font": 
             {
                 "face": "JetBrainsMono Nerd Font Mono",
+                "features": 
+                {
+                    "calt": 0
+                },
                 "size": 12
             },
             "padding": "0",
-            "scrollbarState": "hidden"
+            "scrollbarState": "hidden",
+            "useAcrylic": false
         },
         "list": 
         [
@@ -126,43 +131,60 @@
                 "source": "Windows.Terminal.Wsl"
             },
             {
-                "colorScheme": "Campbell",
+                "colorScheme": 
+                {
+                    "light": "Campbell"
+                },
                 "commandline": "ubuntu.exe",
                 "guid": "{a3a6ad83-2df6-4934-b80d-a1bafe39e121}",
                 "hidden": false,
                 "icon": "https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png",
                 "name": "Ubuntu",
                 "tabTitle": "Ubuntu"
+            },
+            {
+                "guid": "{b1b6ac32-b49f-51e1-970c-8dd9e419eda3}",
+                "hidden": false,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{6497f9f9-aa4f-5ab0-9425-2e4f0916a616}",
+                "hidden": false,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
             }
         ]
     },
     "schemes": 
     [
         {
-            "background": "#1E2027",
-            "black": "#585F6D",
-            "blue": "#4D89C4",
-            "brightBlack": "#585F6D",
-            "brightBlue": "#4C89C5",
-            "brightCyan": "#44A8B6",
-            "brightGreen": "#5AB977",
-            "brightPurple": "#D55119",
-            "brightRed": "#D95360",
-            "brightWhite": "#E6E5FF",
-            "brightYellow": "#DFB563",
-            "cursorColor": "#F6F7EC",
-            "cyan": "#44A8B6",
-            "foreground": "#9BA2B2",
-            "green": "#5AB977",
-            "name": "Firewatch",
-            "purple": "#D55119",
-            "red": "#D95360",
-            "selectionBackground": "#2F363E",
-            "white": "#E6E5FF",
-            "yellow": "#DFB563"
+            "background": "#080808",
+            "black": "#080808",
+            "blue": "#569CD6",
+            "brightBlack": "#545454",
+            "brightBlue": "#569CD6",
+            "brightCyan": "#56B6C2",
+            "brightGreen": "#6A9955",
+            "brightPurple": "#C586C0",
+            "brightRed": "#F44747",
+            "brightWhite": "#D4D4D4",
+            "brightYellow": "#DCDCAA",
+            "cursorColor": "#AEAFAD",
+            "cyan": "#56B6C2",
+            "foreground": "#D4D4D4",
+            "green": "#6A9955",
+            "name": "VS Code",
+            "purple": "#C586C0",
+            "red": "#F44747",
+            "selectionBackground": "#264F78",
+            "white": "#D4D4D4",
+            "yellow": "#DCDCAA"
         }
     ],
-    "theme": "system",
+    "showTabsInTitlebar": false,
+    "tabWidthMode": "equal",
+    "theme": "dark",
     "themes": [],
-    "useAcrylicInTabRow": false
+    "useAcrylicInTabRow": true
 }
