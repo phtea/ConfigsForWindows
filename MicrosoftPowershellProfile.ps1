@@ -35,6 +35,38 @@ function cut {
     Invoke-Expression $command
 }
 
+# Function to merge audio channels into one
+function merge-audio {
+    param (
+        [Parameter(Mandatory = $true)]
+        [string]$Filename
+    )
+
+    $Output = [System.IO.Path]::ChangeExtension($Filename, "") + "_merged.mp4"
+    $command = "ffmpeg -i `"$Filename`" -filter_complex `[0:a:0][0:a:1]amix=inputs=2:duration=longest[aout]` -map 0:v -map `[aout]` -c:v copy -c:a aac -b:a 192k `"$Output`""
+
+    Write-Host "Merging audio tracks: $command"
+    Invoke-Expression $command
+}
+
+# Function to compress video with quality level (0 = best, 10 = smallest)
+function compress-video {
+    param (
+        [Parameter(Mandatory = $true)]
+        [string]$Filename,
+
+        [ValidateRange(0,10)]
+        [int]$Level
+    )
+
+    $crf = 18 + [math]::Round($Level * 1.5)  # CRF: 18 (best) to ~33 (worst)
+    $Output = [System.IO.Path]::ChangeExtension($Filename, "") + "_compressed.mp4"
+    $command = "ffmpeg -i `"$Filename`" -c:v libx264 -preset slow -crf $crf -c:a aac -b:a 128k `"$Output`""
+
+    Write-Host "Compressing (level $Level, crf $crf): $command"
+    Invoke-Expression $command
+}
+
 function symlink {
     param (
         [Parameter(Mandatory = $true, Position = 0)]
